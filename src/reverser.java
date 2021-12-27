@@ -4,5 +4,11 @@ public class reverser {
         int num1 = 2;
         int num2 = 3;
         System.out.println(num1 + num2);
+        String bruh = "bruh";
+        String sentence = bruh + " " + integer() + integer();
+        System.out.println(sentence);
+    }
+    public static int integer() {
+        return 5;
     }
 }
