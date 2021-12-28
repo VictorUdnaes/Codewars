@@ -26,15 +26,15 @@ public class reverser {
 
     public static StringBuilder reverse (String sentence) {
         int length = (sentence.length());
-        String[] a = new String[length+1];
+        String[] a = new String[length];
         StringBuilder reversedWord = new StringBuilder();
-        for (int i = 0;i<length/2;i++) {
+        for (int i = 0;i<(sentence.length()/2);i++) {
             String temp = sentence.substring(i,i+1);
-            a[i] = sentence.substring(length);
-            a[length] = temp;
+            a[i] = sentence.substring(length-1 , length);
+            a[length-1] = temp;
             length--;
         }
-        for (int i = 0;i<length;i++) {
+        for (int i = 0;i<sentence.length();i++) {
             reversedWord.append(a[i]);
         }
         return reversedWord;
